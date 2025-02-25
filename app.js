@@ -23,6 +23,7 @@ function getUserInput(){
         return userInput;
     }else{
         console.log("Wrong, please try again.");
+        getUserInput();
     }
 }
 
