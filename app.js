@@ -60,11 +60,9 @@ function playRound(userInput, computerChoice){
 }
 //Create function that runs through play round 5 times and determines a winner after game is done
 function playGame(){
-    for(i=1;i<=5;i++){
         userInput = getUserInput();
         computerChoice = getComputerChoice();
         playRound(userInput, computerChoice);
-    }
     if(humanScore > computerScore){
         console.log("_____________________________________________________________")
         console.log("Congratulations! You Win! The score is: Human ",humanScore , "Computer ",computerScore);
