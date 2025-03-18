@@ -7,6 +7,7 @@ const scissorsButton = document.querySelector('.scissors')
 const outcomeDiv = document.querySelector('.outcome')
 const humanScoreSpan = document.querySelector('.human-score')
 const computerScoreSpan = document.querySelector('.computer-score')
+const removeContainer = document.querySelector('.container')
 
 function getComputerChoice(){
     const options  = ['rock','paper','scissors']
@@ -20,13 +21,15 @@ const checkForWinner = (humanScore, computerScore) =>{
         h2.classList.add('player-won')
         h2.innerText = `Game over You Won! ${humanScore} to ${computerScore}`
         outcomeDiv.append(h2)
+        removeContainer.remove()
     }else if(computerScore === 5){
         const h2 = document.createElement('h2')
         h2.classList.add('computer-won')
         h2.innerText = `Game Over You Lose! ${humanScore} to ${computerScore}`
         outcomeDiv.append(h2)
+        removeContainer.remove()
     }
-    
+
 } 
 
 const updateScores = (humanScore, computerScore) => {
@@ -98,5 +101,3 @@ function playRound(playerSelection, computerSelection){
     }
  }
 }
-
-
